@@ -45,6 +45,8 @@ load_num:
     LDR R0, =0x40010814             // Adress of BRR
     LDR R1, =0xFE                   // Clear GPIOA 1 - 7
     STR R0, [R1]                    // Execute cleaning
+    LDR R8, =0x4001080C              // check ODR
+    LDR R9, [R8]
     // 7 segment indicator is empty
 
 
