@@ -1,5 +1,5 @@
 .include "defines.s"
-.globl main
+.global main
 .text
 .thumb
 .syntax unified
