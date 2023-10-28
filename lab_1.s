@@ -33,7 +33,7 @@ read_button:
     BNE read_button                 // wait for button
 increment:
     ADD R5, R5, #1                  // increment R5
-    CMP R5, #10                     // check if counter > max value (9)
+    CMP R5, #18                     // check if counter > max value (9)
     BEQ begining                    // begin again
 
     LDR R6, =0xFFFFF                 // set counter
@@ -63,6 +63,14 @@ branchtable:
     .byte ((indicate_7 - branchtable) / 2)
     .byte ((indicate_8 - branchtable) / 2)
     .byte ((indicate_9 - branchtable) / 2)
+    .byte ((indicate_8 - branchtable) / 2)
+    .byte ((indicate_7 - branchtable) / 2)
+    .byte ((indicate_6 - branchtable) / 2)
+    .byte ((indicate_5 - branchtable) / 2)
+    .byte ((indicate_4 - branchtable) / 2)
+    .byte ((indicate_3 - branchtable) / 2)
+    .byte ((indicate_2 - branchtable) / 2)
+    .byte ((indicate_1 - branchtable) / 2)
 
 indicate_0:
     LDR R1, =0xEE                   // 0xEE = simbol 0 in 7segment indicator
